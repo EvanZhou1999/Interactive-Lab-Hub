@@ -5,11 +5,23 @@ import board
 import busio
 import adafruit_mpr121
 import pygame as pg
+# import qwiic_led_stick
+# import random
 
 i2c = busio.I2C(board.SCL, board.SDA)
 pad1 = adafruit_mpr121.MPR121(i2c) # 0x5a
 pad2 = adafruit_mpr121.MPR121(i2c, address=0x5b)
 pg.mixer.init()
+
+# my_stick = qwiic_led_stick.QwiicLEDStick()
+
+# if my_stick.begin() == False:
+#     print("\nThe Qwiic LED Stick isn't connected to the sytsem. Please check your connection", \
+#         file=sys.stderr)
+# else:
+#     print("\nLED Stick ready!")
+
+# my_stick.set_all_LED_brightness(15)
 
 sound_file_mappins = [
     ["HV_64", "HV_65", "HV_66", "HV_67"],  # E
@@ -75,5 +87,7 @@ while True:
     for string, fret in enumerate(out):
         if not fret == -1:
             sound_maps[string][fret].play()
+            #my_stick.set_all_LED_color(random.randint(0, 220), random.randint(0, 220), random.randint(0, 220))
+
     #time.sleep(0.1)
     
