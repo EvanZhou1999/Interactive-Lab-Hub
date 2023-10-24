@@ -1,7 +1,10 @@
 # Ph-UI!!!
 
 **NAMES OF COLLABORATORS HERE**
-
+1. Siddharth Kothari - sk2793
+2. Yifan Zhou - yz2889
+3. Tahmid Kazi - tk596
+4. Omar Mohamed - om84
 
 For lab this week, we focus both on sensing, to bring in new modes of input into your devices, as well as prototyping the physical look and feel of the device. You will think about the physical form the device needs to perform the sensing as well as present the display or feedback about what was sensed. 
 
@@ -153,7 +156,6 @@ You can go to the [Adafruit Learn Page](https://learn.adafruit.com/adafruit-i2c-
 
 #### Joystick (optional)
 
-
 A [joystick](https://www.sparkfun.com/products/15168) can be used to sense and report the input of the stick for it pivoting angle or direction. It also comes with a button input!
 
 <p float="left">
@@ -195,15 +197,21 @@ Usually, sensors need to be positioned in specific locations or orientations to 
 
 **\*\*\*Draw 5 sketches of different ways you might use your sensor, and how the larger device needs to be shaped in order to make the sensor useful.\*\*\***
 
+![storyboards](img/all_storyboards.jpeg)
+
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+- How will the Raspberry Pi be powered hidden in this context?
+- Where should the sensors and Raspberry Pi be stored such that these are not visible to the user?
+- How big should the interactive device be? How portable should the interactive device be?
+- Where should the screen be positioned?
+- How should the information on the small display be designed such that it maximizes readability?
+- How fun or amusing will users find these interactive devices? How long will they want to play for?
 
 **\*\*\*Pick one of these designs to prototype.\*\*\***
-
+We picked the guitar synthesizer because all of us have an affinity to music and wanted to recreate a digital version of our shared passion.
 
 ### Part D
 ### Physical considerations for displaying information and housing parts
-
-
 
 Here is a Pi with a paper faceplate on it to turn it into a display interface:
 
@@ -242,17 +250,29 @@ Here is an example:
 Think about how you want to present the information about what your sensor is sensing! Design a paper display for your project that communicates the state of the Pi and a sensor. Ideally you should design it so that you can slide the Pi out to work on the circuit or programming, and then slide it back in and reattach a few wires to be back in operation.
  
 **\*\*\*Sketch 5 designs for how you would physically position your display and any buttons or knobs needed to interact with it.\*\*\***
+![storyboards](img/all_storyboards.jpeg)
 
 **\*\*\*What are some things these sketches raise as questions? What do you need to physically prototype to understand how to anwer those questions?\*\*\***
+- How to route the copper conductive pads to ensure proper functionality?
+- How to make the mechanical design structurally rigid enough so that we can use the device like a musical instrument?
+- How should the circuitry to the capacitive sensor be designed so as to minimize real estate and materials used?
 
 **\*\*\*Pick one of these display designs to integrate into your prototype.\*\*\***
 
+
+
 **\*\*\*Explain the rationale for the design.\*\*\*** (e.g. Does it need to be a certain size or form or need to be able to be seen from a certain distance?)
 
-Build a cardboard prototype of your design.
 
+Build a cardboard prototype of your design.
+![img1](img/IMG_1214.JPG)
 
 **\*\*\*Document your rough prototype.\*\*\***
+![img2](img/IMG_1212.JPG)
+![img3](img/IMG_1213.JPG)
+![img4](img/IMG_1215.JPG)
+![img5](img/IMG_1216.JPG)
+![img6](img/IMG_1217.JPG)
 
 
 LAB PART 2
@@ -260,6 +280,10 @@ LAB PART 2
 ### Part 2
 
 Following exploration and reflection from Part 1, complete the "looks like," "works like" and "acts like" prototypes for your design, reiterated below.
+
+"looks like," "works like" and "acts like"
+
+
 
 ### Part E (Optional)
 ### Servo Control with Joystick
@@ -325,4 +349,10 @@ Document all the prototypes and iterations you have designed and worked on! Agai
 * "Looks like": shows how the device should look, feel, sit, weigh, etc.
 * "Works like": shows what the device can do
 * "Acts like": shows how a person would interact with the device
+
+Our Recordings are shown below:
+
+https://drive.google.com/file/d/1HZIt_Em2LysmZRzfuyPaMjN1JxUhSKLg/view?usp=sharing
+
+https://drive.google.com/file/d/1-gdE8BexUPZDhIRQGsTD5SAPHoREejM9/view?usp=sharing
 
