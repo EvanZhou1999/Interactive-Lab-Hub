@@ -1,0 +1,5 @@
+0 Headphones
+1 Neutral
+2 Laptop
+3 Charger
+4 IDD_BOX
