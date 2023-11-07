@@ -1,7 +1,10 @@
 # Observant Systems
 
 **NAMES OF COLLABORATORS HERE**
-
+1. Siddharth Kothari - sk2793
+2. Yifan Zhou - yz2889
+3. Tahmid Kazi - tk596
+4. Omar Mohamed - om84
 
 For lab this week, we focus on creating interactive systems that can detect and respond to events or stimuli in the environment of the Pi, like the Boat Detector we mentioned in lecture. 
 Your **observant device** could, for example, count items, find objects, recognize an event or continuously monitor a room.
@@ -121,6 +124,9 @@ Next train your own model. Visit [TeachableMachines](https://teachablemachine.wi
 
 Include screenshots of your use of Teachable Machines, and write how you might use this to create your own classifier. Include what different affordances this method brings, compared to the OpenCV or MediaPipe options.
 
+Using the Teachable Machines ML classifier trainer is an order of magnitude simpler than using OpenCV (which has a nightmare of setup issues with no straightforward tutorial or interface) or the MediaPipe option. Our usage of the Teachable machines software is shown below when we train it for our backpack classifier.
+
+
 #### (Optional) Legacy audio and computer vision observation approaches
 In an earlier version of this class students experimented with observing through audio cues. Find the material here:
 [Audio_optional/audio.md](Audio_optional/audio.md). 
@@ -139,39 +145,95 @@ In an earlier version of this class students experimented with foundational comp
 
 **\*\*\*Describe and detail the interaction, as well as your experimentation here.\*\*\***
 
+We used the teachable machines to train our model to detect the common objects that we put in our backpacks. The screenshots of our custom classifier are included below:
+
+![img1](img1.jpg)
+![img2](img2.jpg)
+![img3](img3.jpg)
+![img4](img4.jpg)
+![img5](img5.jpg)
+![img6](img6.jpg)
+
+
 ### Part C
 ### Test the interaction prototype
 
 Now flight test your interactive prototype and **note down your observations**:
 For example:
 1. When does it what it is supposed to do?
+
+When in good  lighting condition, the backpack detector has no trouble detecting the small itesm
+
 1. When does it fail?
+
+when in dark lighting conditions, the camera fails to pick up the objects.
+
 1. When it fails, why does it fail?
+
+It fails due to bad physical enviroment conditions
+
 1. Based on the behavior you have seen, what other scenarios could cause problems?
+
+situations where the objects are moving fast (resulting in blurry imagery) so the camera cannot pick up objects quickly.
 
 **\*\*\*Think about someone using the system. Describe how you think this will work.\*\*\***
 1. Are they aware of the uncertainties in the system?
+
+In general, most people are aware of some of the high level limitations of cameras. Since this device is an application that uses a camera, the limitations of the hardware will inform the limitations of the classifier.
+
 1. How bad would they be impacted by a miss classification?
+
+The inability to know if their small personal item is with them or not (the cost of that item if it got lost is the cost of a miss classification)
+
 1. How could change your interactive system to address this?
+
+We could incorporate multiple cameras to better capture motion in portable settings or we could incorporate the usage of GPS trackers or Weight sensors (to detect when the object is in the bag).
+
 1. Are there optimizations you can try to do on your sense-making algorithm.
+
+Not that we can think of at this time.
 
 ### Part D
 ### Characterize your own Observant system
 
 Now that you have experimented with one or more of these sense-making systems **characterize their behavior**.
 During the lecture, we mentioned questions to help characterize a material:
+
 * What can you use X for?
+
+The premise behind our idea was to create a portable object detection system for our backpack so that we could keep track of all our loose items when on the go. Instead of using something like Apple AirTags (where you have to attack one tracker for every object) we though of using something more efficient and streamlined to keep track of our belongings.
 * What is a good environment for X?
+
+Backpack detector is meant to be used in a portable setting (i.e. battery powered) where you have a lot of small personal items that need to be tracked (in case you lose any). This assumes you are outside or indoors but with good enough lighting for the camera to be able to detect small objects.
+
 * What is a bad environment for X?
+
+Since this is meant to be a portable object detector that depends on a camera, low light situations are going to be bad for the device to properly identify the small items that need tracking.
+
 * When will X break?
+
+If the backpack detector runs out of battery or is in a low light situation, the detector will not be well equiped enough to do its job. And in those scenarios, the confirmation provided by the backpack detector (as in whether the object/personal item is in your bag or not) should not be trusted.
+
 * When it breaks how will X break?
+
+In the case of this portable camera-based device, the loss of battery power will cause the device to shut down. Plus since this device can also be used when the user is on the move, if  there is any physical damage done to this hardware device (like a sharp ding or accidentally falling on the pavement) it will cause the  product to break.
+
 * What are other properties/behaviors of X?
+
+No other outstanding features can be commented on. The device was built with simplicity and portability in mind 
+
 * How does X feel?
 
+The backpack detector feels like a portable battery powered raspberry pi handheld device. Think like a thicker phone
+
 **\*\*\*Include a short video demonstrating the answers to these questions.\*\*\***
+
+[![Demo](https://img.youtube.com/vi/WtAlBrhbWQM/0.jpg)](https://www.youtube.com/watch?v=WtAlBrhbWQM)
 
 ### Part 2.
 
 Following exploration and reflection from Part 1, finish building your interactive system, and demonstrate it in use with a video.
 
 **\*\*\*Include a short video demonstrating the finished result.\*\*\***
+
+[![Demo](https://img.youtube.com/vi/hYgCenmrJg4/0.jpg)](https://www.youtube.com/watch?v=hYgCenmrJg4)
