@@ -18,6 +18,7 @@ hostname = socket.gethostname()
 # Get the IP address
 ip_address = socket.gethostbyname(hostname)
 player_id = ip_address.replace(".", "")
+player_id = "Yifan"
 
 potato_phrases = [
     "Caught you!",
@@ -93,7 +94,8 @@ server = "farlab.infosci.cornell.edu"
 gamestart = False
 
 def speak_sentence(sentence):
-    subprocess.check_output(f'./googletts_arg.sh "{sentence}"', shell=True, stderr=subprocess.PIPE, universal_newlines=True)
+    subprocess.check_output(f'sh ./googletts_arg.sh "{sentence}"', shell=True, stderr=subprocess.PIPE, universal_newlines=True)
+    pass
 
 def on_connect(client, userdata, flags, rc):
     print(">> MQTT CLIENT CONNECTED")
@@ -116,7 +118,7 @@ def on_message(cleint, userdata, msg):
             updatedisplay("potato")
             speak_sentence(random.choice(potato_phrases))
         else:
-            updatedisplay["no_potato"]
+            updatedisplay("no_potato")
     if msg.topic == "IDD/potatoboom":
         potatoid = msg.payload.decode('UTF-8')
         if potatoid == player_id:
