@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnlasca1jqsqg"]
+
+[ext_resource type="Texture2D" uid="uid://lyc6eauhrwft" path="res://Resources/shield-removebg-preview.png" id="1_cass2"]
+[ext_resource type="Script" path="res://scenes/shield.gd" id="1_g7pdr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr7bj"]
+atlas = ExtResource("1_cass2")
+region = Rect2(0, 0, 127, 316)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mifq0"]
+atlas = ExtResource("1_cass2")
+region = Rect2(127, 0, 127, 316)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yoew"]
+atlas = ExtResource("1_cass2")
+region = Rect2(254, 0, 127, 316)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mbxnu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jr7bj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mifq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yoew")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2e8qh"]
+radius = 29.0
+height = 112.0
+
+[node name="Shield" type="Area2D"]
+script = ExtResource("1_g7pdr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_mbxnu")
+frame = 2
+frame_progress = 1.0
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5, -15)
+shape = SubResource("CapsuleShape2D_2e8qh")

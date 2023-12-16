@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://cji8jx250hp3v"]
+
+[ext_resource type="Script" path="res://scenes/p2_beam.gd" id="1_olwq2"]
+[ext_resource type="Texture2D" uid="uid://doygnonvakna7" path="res://Resources/beam_smaller.png" id="2_xy8pv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jtnau"]
+size = Vector2(49, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65qc2"]
+atlas = ExtResource("2_xy8pv")
+region = Rect2(198, 0, 66, 196)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bdmia"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65qc2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="p2_beam" type="Area2D"]
+script = ExtResource("1_olwq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28.5, 20)
+shape = SubResource("RectangleShape2D_jtnau")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(28.375, 19.7263)
+scale = Vector2(0.648734, 0.205825)
+sprite_frames = SubResource("SpriteFrames_bdmia")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

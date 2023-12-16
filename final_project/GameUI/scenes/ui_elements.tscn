@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbfnlilptldm0"]
+
+[ext_resource type="Theme" uid="uid://i5aoxojgq242" path="res://Resources/UI_theme.tres" id="1_cpumv"]
+
+[node name="UI_elements" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 9.0
+offset_top = 2.0
+offset_right = 1912.0
+offset_bottom = 277.0
+
+[node name="Player2" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 1589.0
+offset_top = 43.0
+offset_right = 1811.0
+offset_bottom = 108.0
+
+[node name="label" type="RichTextLabel" parent="Player2"]
+layout_mode = 2
+theme = ExtResource("1_cpumv")
+text = "Lightning Mage"
+fit_content = true
+
+[node name="HealthBar" type="ProgressBar" parent="Player2"]
+layout_mode = 2
+theme = ExtResource("1_cpumv")
+value = 100.0
+
+[node name="Player1" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 100.0
+offset_top = 43.0
+offset_right = 322.0
+offset_bottom = 97.0
+
+[node name="label" type="RichTextLabel" parent="Player1"]
+layout_mode = 2
+theme = ExtResource("1_cpumv")
+text = "Fire Wizard"
+fit_content = true
+
+[node name="HealthBar" type="ProgressBar" parent="Player1"]
+layout_mode = 2
+theme = ExtResource("1_cpumv")
+value = 100.0
