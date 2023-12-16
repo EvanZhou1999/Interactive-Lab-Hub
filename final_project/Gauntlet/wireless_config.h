@@ -16,8 +16,8 @@ const char* password = "";
 bool UseWAPEnterprise = true;
 //===================================================
 const char* WAP2_SSID = "eduroam";
-const char* EAP_IDENTITY = "om84@cornell.edu";
-const char* EAP_PASSWORD = "Alahly00";
+const char* EAP_IDENTITY = "xxxxxx@cornell.edu";
+const char* EAP_PASSWORD = "";
 //===================================================
 
 
